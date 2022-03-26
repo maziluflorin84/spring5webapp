@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Spring Framework Guru - Books</title>
+</head>
+<body>
+<h1>Book List</h1>
+<table style="border: 1px solid black;">
+    <tr style="border: 1px solid red;">
+        <th style="border: 1px solid green;">ID</th>
+        <th style="border: 1px solid deeppink;">Title</th>
+        <th style="border: 1px solid yellow;">Publisher</th>
+    </tr>
+    <tr th:each="book : ${books}">
+        <td th:text="${book.id}">123</td>
+        <td th:text="${book.title}">Spring in Action</td>
+        <td th:text="${book.publisher.name}">Wrox</td>
+    </tr>
+    <tr>
+        <td colspan="3" style="text-align: left; font-weight: bold; border: 1px solid black;" th:text="'Total number of books : ' + ${counter}"></td>
+    </tr>
+</table>
+</body>
+</html>

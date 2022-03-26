@@ -29,6 +29,7 @@ public class BootStrapData implements CommandLineRunner {
 
         Publisher publisher = new Publisher();
         publisher.setName("SFG Publishing");
+        publisher.setAddressLine1("Lorem Ipsum 2");
         publisher.setCity("St Petersburg");
         publisher.setState("FL");
 
